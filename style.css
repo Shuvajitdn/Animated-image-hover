@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+/* Image area */
+.images_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    max-height: 400px;
+    gap: 3rem;
+}
+
+/* Design the images */
+img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    transform-origin: center;
+    transform: perspective(500px) rotateY(30deg);
+    -webkit-box-reflect: below 3px linear-gradient(transparent, transparent, rgba(255,255,255,0.3));
+    transition: transform 0.6s, opacity 0.6s;
+    opacity: 0.6; /* Start with lower opacity */
+}
+
+/* Image hover effect */
+.images_box img:hover {
+    opacity: 1; /* Full opacity on hover */
+    transform: perspective(800px) rotateY(0deg); /* Bring back to 0deg on hover */
+}
